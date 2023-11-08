@@ -1,0 +1,15 @@
+2023-11-08 20:09:49.129  INFO 16344 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-08 20:09:49.130  INFO 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-08 20:09:49.131 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-11-08 20:09:49.131 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-11-08 20:09:49.131 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-11-08 20:09:49.133 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2d07aacc
+2023-11-08 20:09:49.134 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@55638165
+2023-11-08 20:09:49.134 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-11-08 20:09:49.134  INFO 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-11-08 20:09:49.153 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/tasks", parameters={}
+2023-11-08 20:09:49.161 DEBUG 16344 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.todolistapp.resource.impl.TaskResourceImpl#createTask(TaskDto)
+2023-11-08 20:09:49.248 DEBUG 16344 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TaskDto(id=null, name=task1, completed=false)]
+2023-11-08 20:09:49.465 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-11-08 20:09:49.466 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TaskDto(id=1, name=task1, completed=false)]
+2023-11-08 20:09:49.492 DEBUG 16344 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
