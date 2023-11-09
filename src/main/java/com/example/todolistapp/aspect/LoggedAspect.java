@@ -31,7 +31,7 @@ public class LoggedAspect {
         // not used - only aspect definition
     }
 
-    @Pointcut("within(@com.example.todolistapp.annotation.AOSWatchApi *)")
+    @Pointcut("within(@com.example.todolistapp.annotation.AOSDWatchApi *)")
     private static void isAOSDWatchApi() {
         // not used - only aspect definition
     }
