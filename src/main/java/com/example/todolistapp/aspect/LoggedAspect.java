@@ -34,41 +34,6 @@ public class LoggedAspect {
         // not used - only aspect definition
     }
 
-    /**
-     * Info log public method invocation
-     *
-     * @param joinPoint {@link ProceedingJoinPoint}
-     * @return {@link Object}
-     * @throws Throwable the throwable
-     */
-    @Around(value = "publicMethod() && isAOSDLoggedInfo()")
-    public Object logInfoMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
-        return logInfo(joinPoint);
-    }
-
-    /**
-     * Monitor time public method invocation
-     *
-     * @param joinPoint {@link ProceedingJoinPoint}
-     * @return {@link Object}
-     * @throws Throwable the throwable
-     */
-    @Around(value = "publicMethod() && isAOSDTimeMonitor()")
-    public void monitorTimeMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
-        monitorTime(joinPoint);
-    }
-
-    @AfterThrowing(
-            pointcut = "publicMethod() && isAOSDLoggedInfo()",
-            throwing = "exception"
-    )
-    public void handleException(JoinPoint joinPoint, Exception exception) {
-        log.error("Exception in method: {}, Exception message: {}, Payload: {} ",
-                joinPoint.getSignature().toShortString(),
-                exception.getMessage(),
-                arraytoString(joinPoint.getArgs()));
-    }
-
     private static void monitorTime(ProceedingJoinPoint joinPoint) throws Throwable {
         if (log.isInfoEnabled()) {
             long start = System.currentTimeMillis();
@@ -102,6 +67,41 @@ public class LoggedAspect {
             result = result.substring(0, MAX_LENGTH_OF_LOOGED_MESSAGE) + "...";
         }
         return result;
+    }
+
+    /**
+     * Info log public method invocation
+     *
+     * @param joinPoint {@link ProceedingJoinPoint}
+     * @return {@link Object}
+     * @throws Throwable the throwable
+     */
+    @Around(value = "publicMethod() && isAOSDLoggedInfo()")
+    public Object logInfoMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
+        return logInfo(joinPoint);
+    }
+
+    /**
+     * Monitor time public method invocation
+     *
+     * @param joinPoint {@link ProceedingJoinPoint}
+     * @return {@link Object}
+     * @throws Throwable the throwable
+     */
+    @Around(value = "publicMethod() && isAOSDTimeMonitor()")
+    public void monitorTimeMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
+        monitorTime(joinPoint);
+    }
+
+    @AfterThrowing(
+            pointcut = "publicMethod() && isAOSDLoggedInfo()",
+            throwing = "exception"
+    )
+    public void handleException(JoinPoint joinPoint, Exception exception) {
+        log.error("Exception in method: {}, Exception message: {}, Payload: {} ",
+                joinPoint.getSignature().toShortString(),
+                exception.getMessage(),
+                arraytoString(joinPoint.getArgs()));
     }
 
 }
