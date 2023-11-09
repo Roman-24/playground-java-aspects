@@ -25,7 +25,12 @@ public class LoggedAspect {
     }
 
     @Pointcut("within(@com.example.todolistapp.annotation.AOSDLoggedInfo *)")
-    private static void isAOSDLoggedLogInfo() {
+    private static void isAOSDLoggedInfo() {
+        // not used - only aspect definition
+    }
+
+    @Pointcut("within(@com.example.todolistapp.annotation.AOSDTimeMonitor *)")
+    private static void isAOSDTimeMonitor() {
         // not used - only aspect definition
     }
 
@@ -36,13 +41,25 @@ public class LoggedAspect {
      * @return {@link Object}
      * @throws Throwable the throwable
      */
-    @Around(value = "publicMethod() && isAOSDLoggedLogInfo()")
+    @Around(value = "publicMethod() && isAOSDLoggedInfo()")
     public Object logInfoMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
         return logInfo(joinPoint);
     }
 
+    /**
+     * Monitor time public method invocation
+     *
+     * @param joinPoint {@link ProceedingJoinPoint}
+     * @return {@link Object}
+     * @throws Throwable the throwable
+     */
+    @Around(value = "publicMethod() && isAOSDTimeMonitor()")
+    public void monitorTimeMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
+        monitorTime(joinPoint);
+    }
+
     @AfterThrowing(
-            pointcut = "publicMethod() && isAOSDLoggedLogInfo()",
+            pointcut = "publicMethod() && isAOSDLoggedInfo()",
             throwing = "exception"
     )
     public void handleException(JoinPoint joinPoint, Exception exception) {
@@ -52,17 +69,23 @@ public class LoggedAspect {
                 arraytoString(joinPoint.getArgs()));
     }
 
-    private static Object logInfo(ProceedingJoinPoint joinPoint) throws Throwable {
+    private static void monitorTime(ProceedingJoinPoint joinPoint) throws Throwable {
         if (log.isInfoEnabled()) {
             long start = System.currentTimeMillis();
+            joinPoint.proceed();
+            long executionTime = System.currentTimeMillis() - start;
+            log.info("Duration of execution: {}ms", executionTime);
+        }
+    }
+
+    private static Object logInfo(ProceedingJoinPoint joinPoint) throws Throwable {
+        if (log.isInfoEnabled()) {
             log.info("Enter: {}.{}() with argument[s] = {}", joinPoint.getSignature().getDeclaringTypeName(),
                     joinPoint.getSignature().getName(), arraytoString(joinPoint.getArgs()));
             Object result = joinPoint.proceed();
-            long executionTime = System.currentTimeMillis() - start;
-
-            log.info("Exit: {}.{}() with result({}ms) = {}", joinPoint.getSignature().getDeclaringTypeName(),
-                    joinPoint.getSignature().getName(), executionTime,
-                    arraytoString(new Object[]{res\ult}));
+            log.info("Exit: {}.{}() with result() = {}", joinPoint.getSignature().getDeclaringTypeName(),
+                    joinPoint.getSignature().getName(),
+                    arraytoString(new Object[]{result}));
             return result;
         }
         return null;
