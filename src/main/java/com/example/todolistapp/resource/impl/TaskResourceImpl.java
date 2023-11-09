@@ -1,8 +1,7 @@
 package com.example.todolistapp.resource.impl;
 
 
-import com.example.todolistapp.annotation.AOSDLoggedInfo;
-import com.example.todolistapp.annotation.AOSDTimeMonitor;
+import com.example.todolistapp.annotation.AOSWatchApi;
 import com.example.todolistapp.dto.TaskDto;
 import com.example.todolistapp.model.Task;
 import com.example.todolistapp.resource.TaskResource;
@@ -21,8 +20,7 @@ import java.util.stream.Collectors;
 @RestController
 @AllArgsConstructor
 @NoArgsConstructor
-@AOSDLoggedInfo
-@AOSDTimeMonitor
+@AOSWatchApi
 public class TaskResourceImpl implements TaskResource {
 
     @Autowired

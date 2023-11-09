@@ -9,9 +9,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-/**
- * Security aspect
- */
 @Aspect
 @Component
 @Slf4j
@@ -31,6 +28,11 @@ public class LoggedAspect {
 
     @Pointcut("within(@com.example.todolistapp.annotation.AOSDTimeMonitor *)")
     private static void isAOSDTimeMonitor() {
+        // not used - only aspect definition
+    }
+
+    @Pointcut("within(@com.example.todolistapp.annotation.AOSWatchApi *)")
+    private static void isAOSDWatchApi() {
         // not used - only aspect definition
     }
 
@@ -69,28 +71,20 @@ public class LoggedAspect {
         return result;
     }
 
-    /**
-     * Info log public method invocation
-     *
-     * @param joinPoint {@link ProceedingJoinPoint}
-     * @return {@link Object}
-     * @throws Throwable the throwable
-     */
     @Around(value = "publicMethod() && isAOSDLoggedInfo()")
     public Object logInfoMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
         return logInfo(joinPoint);
     }
 
-    /**
-     * Monitor time public method invocation
-     *
-     * @param joinPoint {@link ProceedingJoinPoint}
-     * @return {@link Object}
-     * @throws Throwable the throwable
-     */
     @Around(value = "publicMethod() && isAOSDTimeMonitor()")
     public void monitorTimeMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
         monitorTime(joinPoint);
+    }
+
+    @Around(value = "publicMethod() && isAOSDWatchApi() && !isAOSDLoggedInfo() && !isAOSDTimeMonitor()")
+    public Object watchApi(ProceedingJoinPoint joinPoint) throws Throwable {
+        monitorTime(joinPoint);
+        return logInfo(joinPoint);
     }
 
     @AfterThrowing(
