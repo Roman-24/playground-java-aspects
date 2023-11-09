@@ -53,15 +53,19 @@ public class LoggedAspect {
     }
 
     private static Object logInfo(ProceedingJoinPoint joinPoint) throws Throwable {
-        long start = System.currentTimeMillis();
-        Object result = joinPoint.proceed();
-        long executionTime = System.currentTimeMillis() - start;
         if (log.isInfoEnabled()) {
+            long start = System.currentTimeMillis();
+            log.info("Enter: {}.{}() with argument[s] = {}", joinPoint.getSignature().getDeclaringTypeName(),
+                    joinPoint.getSignature().getName(), arraytoString(joinPoint.getArgs()));
+            Object result = joinPoint.proceed();
+            long executionTime = System.currentTimeMillis() - start;
+
             log.info("Exit: {}.{}() with result({}ms) = {}", joinPoint.getSignature().getDeclaringTypeName(),
                     joinPoint.getSignature().getName(), executionTime,
-                    arraytoString(new Object[]{result}));
+                    arraytoString(new Object[]{res\ult}));
+            return result;
         }
-        return result;
+        return null;
     }
 
     private static String arraytoString(Object[] args) {

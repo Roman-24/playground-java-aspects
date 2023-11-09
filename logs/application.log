@@ -1,0 +1,150 @@
+2023-11-09 01:15:43.508  INFO 11876 --- [main] c.e.todolistapp.TodolistappApplication   : Starting TodolistappApplication using Java 1.8.0_342 on melon with PID 11876 (C:\Users\bitaror\OneDrive - Softec s.r.o\FIIT\todolistapp\target\classes started by bitaror in C:\Users\bitaror\OneDrive - Softec s.r.o\FIIT\todolistapp)
+2023-11-09 01:15:43.511  INFO 11876 --- [main] c.e.todolistapp.TodolistappApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-11-09 01:15:44.147  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-09 01:15:44.207  INFO 11876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+2023-11-09 01:15:44.553  INFO 11876 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$838e4129] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-09 01:15:44.614  INFO 11876 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-09 01:15:45.125  INFO 11876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-09 01:15:45.131  INFO 11876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-09 01:15:45.132  INFO 11876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-09 01:15:45.220  INFO 11876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-09 01:15:45.220  INFO 11876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1665 ms
+2023-11-09 01:15:45.273  INFO 11876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-09 01:15:45.403  INFO 11876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-09 01:15:45.416  INFO 11876 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-11-09 01:15:45.629  INFO 11876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-09 01:15:45.681  INFO 11876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-09 01:15:45.832  INFO 11876 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-09 01:15:45.960  INFO 11876 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-09 01:15:46.577  INFO 11876 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-09 01:15:46.593  INFO 11876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 01:15:47.091  WARN 11876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-09 01:15:47.765 DEBUG 11876 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-11-09 01:15:47.892 DEBUG 11876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-11-09 01:15:47.950 DEBUG 11876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-11-09 01:15:47.972 DEBUG 11876 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-11-09 01:15:48.547  INFO 11876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-09 01:15:48.559  INFO 11876 --- [main] c.e.todolistapp.TodolistappApplication   : Started TodolistappApplication in 5.463 seconds (JVM running for 6.257)
+2023-11-09 01:15:51.129  INFO 11876 --- [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-09 01:15:51.130  INFO 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-09 01:15:51.130 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-11-09 01:15:51.131 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-11-09 01:15:51.131 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-11-09 01:15:51.134 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e6cb932
+2023-11-09 01:15:51.135 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@46894dc5
+2023-11-09 01:15:51.135 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-11-09 01:15:51.135  INFO 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-11-09 01:15:51.148 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/tasks", parameters={}
+2023-11-09 01:15:51.158 DEBUG 11876 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.todolistapp.resource.impl.TaskResourceImpl#createTask(TaskDto)
+2023-11-09 01:15:51.233 DEBUG 11876 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TaskDto(id=null, name=task2, completed=false)]
+2023-11-09 01:15:51.438  INFO 11876 --- [http-nio-8080-exec-8] c.e.todolistapp.aspect.LoggedAspect      : Exit: com.example.todolistapp.resource.impl.TaskResourceImpl.createTask() with result(188ms) = <201 CREATED Created,TaskDto(id=1, name=task2, completed=false),[]>; 
+2023-11-09 01:15:51.460 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-11-09 01:15:51.461 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TaskDto(id=1, name=task2, completed=false)]
+2023-11-09 01:15:51.485 DEBUG 11876 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2023-11-09 01:17:36.805  INFO 11876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 01:17:36.805  INFO 11876 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-11-09 01:17:36.826  INFO 11876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-09 01:17:36.833  INFO 11876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-09 01:18:15.054  INFO 5536 --- [main] c.e.todolistapp.TodolistappApplication   : Starting TodolistappApplication using Java 1.8.0_342 on melon with PID 5536 (C:\Users\bitaror\OneDrive - Softec s.r.o\FIIT\todolistapp\target\classes started by bitaror in C:\Users\bitaror\OneDrive - Softec s.r.o\FIIT\todolistapp)
+2023-11-09 01:18:15.057  INFO 5536 --- [main] c.e.todolistapp.TodolistappApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-11-09 01:18:15.740  INFO 5536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-09 01:18:15.796  INFO 5536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2023-11-09 01:18:16.212  INFO 5536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d9e80726] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-09 01:18:16.260  INFO 5536 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-09 01:18:16.839  INFO 5536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-09 01:18:16.848  INFO 5536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-09 01:18:16.849  INFO 5536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-09 01:18:16.943  INFO 5536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-09 01:18:16.943  INFO 5536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1835 ms
+2023-11-09 01:18:16.989  INFO 5536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-09 01:18:17.132  INFO 5536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-09 01:18:17.146  INFO 5536 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-11-09 01:18:17.357  INFO 5536 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-09 01:18:17.397  INFO 5536 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-09 01:18:17.556  INFO 5536 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-09 01:18:17.719  INFO 5536 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-09 01:18:18.393  INFO 5536 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-09 01:18:18.410  INFO 5536 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 01:18:18.893  WARN 5536 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-09 01:18:19.549 DEBUG 5536 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-11-09 01:18:19.659 DEBUG 5536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-11-09 01:18:19.714 DEBUG 5536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-11-09 01:18:19.731 DEBUG 5536 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-11-09 01:18:20.231  INFO 5536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-09 01:18:20.241  INFO 5536 --- [main] c.e.todolistapp.TodolistappApplication   : Started TodolistappApplication in 5.605 seconds (JVM running for 6.436)
+2023-11-09 01:18:24.534  INFO 5536 --- [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-09 01:18:24.535  INFO 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-09 01:18:24.535 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-11-09 01:18:24.536 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-11-09 01:18:24.536 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-11-09 01:18:24.538 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@793d09e
+2023-11-09 01:18:24.539 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@20a47036
+2023-11-09 01:18:24.539 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-11-09 01:18:24.539  INFO 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-11-09 01:18:24.557 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/tasks", parameters={}
+2023-11-09 01:18:24.566 DEBUG 5536 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.todolistapp.resource.impl.TaskResourceImpl#createTask(TaskDto)
+2023-11-09 01:18:24.646 DEBUG 5536 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TaskDto(id=null, name=task2, completed=false)]
+2023-11-09 01:18:24.804  INFO 5536 --- [http-nio-8080-exec-7] c.e.todolistapp.aspect.LoggedAspect      : Exit: com.example.todolistapp.resource.impl.TaskResourceImpl.createTask() with result(145ms) = <201 CREATED Created,TaskDto(id=1, name=task2, completed=false),[]>; 
+2023-11-09 01:18:24.820 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-11-09 01:18:24.821 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TaskDto(id=1, name=task2, completed=false)]
+2023-11-09 01:18:24.838 DEBUG 5536 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2023-11-09 01:18:54.737 DEBUG 5536 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/tasks", parameters={}
+2023-11-09 01:18:54.738 DEBUG 5536 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.todolistapp.resource.impl.TaskResourceImpl#createTask(TaskDto)
+2023-11-09 01:18:54.740 DEBUG 5536 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TaskDto(id=null, name=task2, completed=false)]
+2023-11-09 01:19:06.097  INFO 5536 --- [http-nio-8080-exec-3] c.e.todolistapp.aspect.LoggedAspect      : Exit: com.example.todolistapp.resource.impl.TaskResourceImpl.createTask() with result(8560ms) = <201 CREATED Created,TaskDto(id=2, name=task2, completed=false),[]>; 
+2023-11-09 01:19:06.099 DEBUG 5536 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-11-09 01:19:06.099 DEBUG 5536 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TaskDto(id=2, name=task2, completed=false)]
+2023-11-09 01:19:06.101 DEBUG 5536 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2023-11-09 01:19:06.514  INFO 5536 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 01:19:06.514  INFO 5536 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-11-09 01:19:06.522  WARN 5536 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2023-11-09 01:19:06.522 ERROR 5536 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-11-09 01:19:06.525  WARN 5536 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2023-11-09 01:19:06.525 ERROR 5536 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-11-09 01:19:06.526  WARN 5536 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2023-11-09 01:19:06.527  INFO 5536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-09 01:19:06.530  INFO 5536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-09 01:20:32.698  INFO 14152 --- [main] c.e.todolistapp.TodolistappApplication   : Starting TodolistappApplication using Java 1.8.0_342 on melon with PID 14152 (C:\Users\bitaror\OneDrive - Softec s.r.o\FIIT\todolistapp\target\classes started by bitaror in C:\Users\bitaror\OneDrive - Softec s.r.o\FIIT\todolistapp)
+2023-11-09 01:20:32.701  INFO 14152 --- [main] c.e.todolistapp.TodolistappApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-11-09 01:20:33.353  INFO 14152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-09 01:20:33.407  INFO 14152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+2023-11-09 01:20:33.746  INFO 14152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2e3c48b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-09 01:20:33.800  INFO 14152 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-11-09 01:20:34.335  INFO 14152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-09 01:20:34.344  INFO 14152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-09 01:20:34.345  INFO 14152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-09 01:20:34.455  INFO 14152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-09 01:20:34.455  INFO 14152 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1713 ms
+2023-11-09 01:20:34.503  INFO 14152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-09 01:20:34.628  INFO 14152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-09 01:20:34.641  INFO 14152 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-11-09 01:20:34.849  INFO 14152 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-09 01:20:34.892  INFO 14152 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-09 01:20:35.045  INFO 14152 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-09 01:20:35.174  INFO 14152 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-09 01:20:35.781  INFO 14152 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-09 01:20:35.795  INFO 14152 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-09 01:20:36.269  WARN 14152 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-09 01:20:36.872 DEBUG 14152 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-11-09 01:20:36.993 DEBUG 14152 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2023-11-09 01:20:37.053 DEBUG 14152 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-11-09 01:20:37.073 DEBUG 14152 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-11-09 01:20:37.580  INFO 14152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-09 01:20:37.592  INFO 14152 --- [main] c.e.todolistapp.TodolistappApplication   : Started TodolistappApplication in 5.353 seconds (JVM running for 6.203)
+2023-11-09 01:20:47.120  INFO 14152 --- [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-09 01:20:47.120  INFO 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-09 01:20:47.121 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-11-09 01:20:47.121 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-11-09 01:20:47.121 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-11-09 01:20:47.123 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e090aaa
+2023-11-09 01:20:47.124 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6df2a206
+2023-11-09 01:20:47.124 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-11-09 01:20:47.124  INFO 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-11-09 01:20:47.140 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/tasks", parameters={}
+2023-11-09 01:20:47.149 DEBUG 14152 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.todolistapp.resource.impl.TaskResourceImpl#createTask(TaskDto)
+2023-11-09 01:20:47.229 DEBUG 14152 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TaskDto(id=null, name=task2, completed=false)]
+2023-11-09 01:20:47.243  INFO 14152 --- [http-nio-8080-exec-7] c.e.todolistapp.aspect.LoggedAspect      : Enter: com.example.todolistapp.resource.impl.TaskResourceImpl.createTask() with argument[s] = TaskDto(id=null, name=task2, completed=false); 
+2023-11-09 01:20:47.419  INFO 14152 --- [http-nio-8080-exec-7] c.e.todolistapp.aspect.LoggedAspect      : Exit: com.example.todolistapp.resource.impl.TaskResourceImpl.createTask() with result(177ms) = <201 CREATED Created,TaskDto(id=1, name=task2, completed=false),[]>; 
+2023-11-09 01:20:47.439 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-11-09 01:20:47.439 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TaskDto(id=1, name=task2, completed=false)]
+2023-11-09 01:20:47.460 DEBUG 14152 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
