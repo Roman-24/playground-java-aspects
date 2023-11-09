@@ -24,32 +24,9 @@ public class LoggedAspect {
         // not used - only aspect definition
     }
 
-    @Pointcut("within(@com.example.todolistapp.annotation.AOSDLogged *)")
-    private static void isAOSDLogged() {
-        // not used - only aspect definition
-    }
-
-    @Pointcut("@annotation(com.example.todolistapp.annotation.AOSDLogged.NoLog)")
-    private static void isAOSDLoggedNoLog() {
-        // not used - only aspect definition
-    }
-
     @Pointcut("within(@com.example.todolistapp.annotation.AOSDLoggedInfo *)")
     private static void isAOSDLoggedLogInfo() {
         // not used - only aspect definition
-    }
-
-
-    /**
-     * Debug log public method invocation
-     *
-     * @param joinPoint {@link ProceedingJoinPoint}
-     * @return {@link Object}
-     * @throws Throwable the throwable
-     */
-    @Around(value = "publicMethod() && isAOSDLogged() && !isAOSDLoggedNoLog()")
-    public Object logDebugMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
-        return logDebug(joinPoint);
     }
 
     /**
@@ -59,13 +36,13 @@ public class LoggedAspect {
      * @return {@link Object}
      * @throws Throwable the throwable
      */
-    @Around(value = "publicMethod() && isAOSDLoggedLogInfo() && !isAOSDLoggedNoLog()")
+    @Around(value = "publicMethod() && isAOSDLoggedLogInfo()")
     public Object logInfoMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable {
-        return log.isDebugEnabled() ? logDebug(joinPoint) : logInfo(joinPoint);
+        return logInfo(joinPoint);
     }
 
     @AfterThrowing(
-            pointcut = "publicMethod() && isAOSDLoggedLogInfo() && !isAOSDLoggedNoLog()",
+            pointcut = "publicMethod() && isAOSDLoggedLogInfo()",
             throwing = "exception"
     )
     public void handleException(JoinPoint joinPoint, Exception exception) {
@@ -82,35 +59,12 @@ public class LoggedAspect {
         if (log.isInfoEnabled()) {
             log.info("Exit: {}.{}() with result({}ms) = {}", joinPoint.getSignature().getDeclaringTypeName(),
                     joinPoint.getSignature().getName(), executionTime,
-                    arraytoString(new Object[]{result}, joinPoint.getSignature().getName()));
-        }
-        return result;
-    }
-
-    private static Object logDebug(ProceedingJoinPoint joinPoint) throws Throwable {
-        long start = System.currentTimeMillis();
-        if (log.isDebugEnabled()) {
-            log.debug("Enter: {}.{}() with argument[s] = {}", joinPoint.getSignature().getDeclaringTypeName(),
-                    joinPoint.getSignature().getName(), arraytoString(joinPoint.getArgs()));
-        }
-        Object result = joinPoint.proceed();
-        long executionTime = System.currentTimeMillis() - start;
-        if (log.isDebugEnabled()) {
-            log.debug("Exit: {}.{}() with result({}ms) = {}", joinPoint.getSignature().getDeclaringTypeName(),
-                    joinPoint.getSignature().getName(), executionTime,
-                    padssEscapeResponse(arraytoString(new Object[]{result}), joinPoint.getSignature().getName()));
+                    arraytoString(new Object[]{result}));
         }
         return result;
     }
 
     private static String arraytoString(Object[] args) {
-        return arraytoString(args, null);
-    }
-
-    private static String arraytoString(Object[] args, String signatureName) {
-        if (signatureName == null) {
-            signatureName = "";
-        }
         StringBuilder sb = new StringBuilder();
         for (Object object : args) {
             sb.append(object);
@@ -122,13 +76,5 @@ public class LoggedAspect {
         }
         return result;
     }
-
-    private static String padssEscapeResponse(String result, String methodName) {
-        if ("secret".equals(methodName) || "hidden".equals(methodName)) {
-            return "****";
-        }
-        return result;
-    }
-
 
 }

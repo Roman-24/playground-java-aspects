@@ -1,7 +1,7 @@
 package com.example.todolistapp.resource.impl;
 
 
-import com.example.todolistapp.annotation.AOSDLogged;
+import com.example.todolistapp.annotation.AOSDLoggedInfo;
 import com.example.todolistapp.dto.TaskDto;
 import com.example.todolistapp.model.Task;
 import com.example.todolistapp.resource.TaskResource;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @RestController
 @AllArgsConstructor
 @NoArgsConstructor
-@AOSDLogged
+@AOSDLoggedInfo
 public class TaskResourceImpl implements TaskResource {
 
     @Autowired
