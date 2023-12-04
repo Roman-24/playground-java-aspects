@@ -20,7 +20,7 @@ public class EventResource {
 
     @PostMapping
     private void showDemo() {
-        eventPublisher.publishCustomEvent("Create event demo");
+        eventPublisher.publishAsEvent("Create event demo");
     }
 
     @PostMapping("kafka")

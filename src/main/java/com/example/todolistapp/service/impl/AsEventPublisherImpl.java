@@ -13,9 +13,8 @@ public class AsEventPublisherImpl {
         this.eventPublisher = eventPublisher;
     }
 
-    public void publishCustomEvent(String message) {
+    public void publishAsEvent(String message) {
         AsEvent customEvent = new AsEvent(this, message);
         eventPublisher.publishEvent(customEvent);
     }
-
 }

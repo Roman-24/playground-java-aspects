@@ -16,7 +16,4 @@ public class AsEvent extends ApplicationEvent {
     public void setEventData(String eventData) {
         this.eventData = eventData;
     }
-
 }
-
-
