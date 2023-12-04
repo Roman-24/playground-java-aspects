@@ -9,6 +9,8 @@ public interface TaskService {
 
     Task save(Task task);
 
+    Task createNew(String description);
+
     Task update(Long id, Task task);
 
     void deleteById(Long id);

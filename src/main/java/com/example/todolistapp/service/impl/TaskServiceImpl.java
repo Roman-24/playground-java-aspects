@@ -7,12 +7,14 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 @NoArgsConstructor
+@Transactional
 public class TaskServiceImpl implements TaskService {
 
     @Autowired
@@ -37,6 +39,14 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public void deleteById(Long id) {
         taskRepository.deleteById(id);
+    }
+
+    @Override
+    public Task createNew(String description) {
+        Task newTask = new Task();
+        newTask.setCompleted(Boolean.FALSE);
+        newTask.setName(description);
+        return save(newTask);
     }
 }
 

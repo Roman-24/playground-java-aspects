@@ -10,11 +10,11 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Component
 @Slf4j
+@Component
 public class LoggedAspect {
 
-    private static final int MAX_LENGTH_OF_LOOGED_MESSAGE = 1000;
+    private static final int MAX_LENGTH_OF_LOGGED_MESSAGE = 1000;
 
     @Pointcut("execution(public * *(..))")
     private static void publicMethod() {
@@ -65,8 +65,8 @@ public class LoggedAspect {
             sb.append("; ");
         }
         String result = sb.toString();
-        if ((result.length() > MAX_LENGTH_OF_LOOGED_MESSAGE)) {
-            result = result.substring(0, MAX_LENGTH_OF_LOOGED_MESSAGE) + "...";
+        if ((result.length() > MAX_LENGTH_OF_LOGGED_MESSAGE)) {
+            result = result.substring(0, MAX_LENGTH_OF_LOGGED_MESSAGE) + "...";
         }
         return result;
     }
